@@ -16,7 +16,7 @@ public class WeatherReportByCity {
      */
     public static String excute(String cityName){
         String url=//此处以返回json格式数据示例,所以format=2,以根据城市名称为例,cityName传入中文
-                "http://v.juhe.cn/weather/citys"+cityName+"key=13d8f14fcc7de01a2e17e902471a9f22";
+                "http://v.juhe.cn/weather/city="+cityName+"key=13d8f14fcc7de01a2e17e902471a9f22";
         return PureNetUtil.get(url);//通过工具类获取返回数据
     }
     /**
