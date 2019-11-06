@@ -39,36 +39,6 @@ public class SQLserver_Link {
 		catch(SQLException e) {
 				System.out.println("请输入正确的表名"+e);
 				System.out.println("连接失败2");
-       }
-        
+       }  
    }
 }
-
-
-
-
-
-/*// 加载数据库驱动，注册到驱动管理器
-        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        // 数据库连接字符串
-        String url = "jdbc:sqlserver://127.0.0.1:1433";
-        // 数据库用户名
-        String usename = "sa";
-        // 数据库密码
-        String psw = "123456789";
-        // 创建Connection连接
-
-        Connection conn = DriverManager.getConnection(url,usename,psw);
-        // 判断数据库连接是否为空
-        if(conn != null){
-            String sql="select * from tb_user where name='"+username+"' and password='"+ password + "'";
-            Statement stmt = conn.createStatement();
-            ResultSet rs=stmt.executeQuery(sql);
-            if(rs.next()){
-                application.setAttribute("name",username);
-                String description = rs.getString("description");
-                application.setAttribute("description",description);
-                response.sendRedirect("success.jsp");
-            }else{
-                response.sendRedirect("Myjsp.jsp");
-*/
